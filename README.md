@@ -67,4 +67,4 @@ The provisioning script will:
 
 7) Proceed to install OpenVPN server (check comments in initscript/openvpn-install.sh for more details).
 
-8) Output instructions to follow on the client VM to set up OpenVPN client.
+8) Output the steps to follow on the client machine to set up OpenVPN client.
