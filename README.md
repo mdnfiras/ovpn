@@ -41,6 +41,13 @@ chmod u=x ovpn_vm.sh
 ./ovpn_vm.sh
 ```
 
+# Removal
+Run the following command in the project's directory:
+
+```bash
+vagrant destroy ovpn
+```
+
 # VM details
 ovpn_vm.sh script will first check if there is any other service listening on port 1194 of the host machine.
 
