@@ -34,7 +34,7 @@ vmachine.vm.network "forwarded_port", guest: 1194, host: 1194, host_ip: "<host_p
 ...
 ```
 
-Start the Vagrant ovpn virtual machine, provision to install OpenVPN and expose the service on <host_private/public_ip>:1194
+Start the Vagrant ovpn virtual machine, provision it to install OpenVPN and expose the service on <host_private/public_ip>:1194
 
 ```bash
 chmod u=x ovpn_vm.sh
@@ -46,7 +46,7 @@ ovpn_vm.sh script will first check if there is any other service listening on po
 
 The VM will start with 1 CPU, 512 MB of RAM and hostname ovpn. Vagrant should automatically tie it with its own virtual network which can access the host's private networks and the Internet.
 
-The TCP requests on the host's <host_private/public_ip>:1194 will be forwarded the VM's eth0 interface. Vagrant is not capable of forwarding UDP paquets using LibVirt as provider.
+The TCP requests on the host's <host_private/public_ip>:1194 will be forwarded to the VM's eth0 interface. Vagrant is not capable of forwarding UDP paquets using LibVirt as provider.
 
 The VM's OS will be Ubuntu Server 18.04.
 
@@ -65,6 +65,6 @@ The provisioning script will:
 
 6) Select "client" as the first client's name.
 
-7) Proceed to install OpenVPN server (check comments in initscript/openvpn-install for more details).
+7) Proceed to install OpenVPN server (check comments in initscript/openvpn-install.sh for more details).
 
 8) Output instructions to follow on the client VM to set up OpenVPN client.
