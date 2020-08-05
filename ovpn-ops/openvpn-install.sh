@@ -159,7 +159,7 @@ if [[ ! -e /etc/openvpn/server/server.conf ]]; then
 	echo
 	echo "Enter a name for the first client:"
 	# Change this variable to select a different name for the first client
-	client="eyacom"
+	client="client"
 	echo "First client name is : $client"
 	echo
 	echo "OpenVPN installation is ready to begin."
