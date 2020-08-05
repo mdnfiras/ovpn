@@ -398,13 +398,11 @@ verb 3" > /etc/openvpn/server/client-common.txt
 	echo "The client configuration is available in:" ~/"$client.ovpn"
 	echo "Steps to follow in the client machine:"
 	echo "1)  Install OpenVPN (on Ubuntu, run: sudo apt install openvpn)"
-	echo "2)  Copy all the following lines into /etc/openvpn/$client.conf"
+	echo "2)  Copy the content of " ~/"$client.ovpn from this server to /etc/openvpn/$client.conf in the client machine"
 	echo "3)  Run: sudo openvpn --client --config /etc/openvpn/$client.conf"
 	echo "4)  OpenVPN will try to connect on each startup. To stop it, run: sudo systemctl stop openvpn@client"
 	echo "5)  To start the service again, run: sudo systemctl start openvpn@client"
 	echo "6)  Repeat steps 2 and 3 if you have a new client configuration"
-	echo "Client configuration: (start copying from this next line to the end of output)"
-	cat ~/"$client.ovpn"
 else
 	#clear
 	echo "OpenVPN is already installed."
