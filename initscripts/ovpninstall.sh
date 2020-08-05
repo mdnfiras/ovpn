@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "=======> downloading ovpn automatic installer :"
-wget https://raw.githubusercontent.com/Nyr/openvpn-install/master/openvpn-install.sh 
+wget https://raw.githubusercontent.com/mdnfiras/ovpn/master/initscripts/openvpn-install.sh
 echo "=======> giving exec right to downloaded script :"
 chmod u=x openvpn-install.sh
 echo "=======> running downloaded script :"
