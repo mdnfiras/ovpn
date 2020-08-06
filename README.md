@@ -5,8 +5,9 @@ Automatic deployment of OpenVPN on a virtual machine provisioned by Vagrant.
 # Installation
 
 Clone the repository.
+
 ```bash
-git clone https://github.com/mdnfiras/devops-infra.git
+git clone https://github.com/mdnfiras/ovpn.git
 ```
 
 # Usage
