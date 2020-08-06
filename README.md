@@ -10,8 +10,6 @@ Clone the repository.
 git clone https://github.com/mdnfiras/ovpn.git
 ```
 
-# Usage
-
 Change directory.
 
 ```bash
@@ -22,9 +20,11 @@ Install Vagrant on the host server along with all the required packages and plug
 
 
 ```bash
-chmod u=x vagrantinstall.sh
-./vagrantinstall.sh
+sudo chmod u=x vagrantinstall.sh
+sudo ./vagrantinstall.sh
 ```
+
+# Usage
 
 Change "<host_private/public_ip>" from ./Vagrantfile to match the IP address of the host server's interface from which connections will be recieved on port 1194.
 
@@ -38,15 +38,16 @@ vmachine.vm.network "forwarded_port", guest: 1194, host: 1194, host_ip: "<host_p
 Start the Vagrant ovpn virtual machine, provision it to install OpenVPN and expose the service on <host_private/public_ip>:1194
 
 ```bash
-chmod u=x ovpn_vm.sh
-./ovpn_vm.sh
+sudo chmod u=x ovpn_vm.sh
+sudo ./ovpn_vm.sh
 ```
 
 # Removal
+
 Run the following command in the project's directory:
 
 ```bash
-vagrant destroy ovpn
+sudo vagrant destroy ovpn
 ```
 
 # VM details
